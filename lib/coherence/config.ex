@@ -108,7 +108,8 @@ defmodule Coherence.Config do
     {:rememberable_cookie_expire_hours, 2 * 24},
     {:async_rememberable?, false},
     :messages_backend,
-    :router
+    :router,
+    {:user_id_type, :integer}
   ]
   |> Enum.each(fn
         {key, default} ->
