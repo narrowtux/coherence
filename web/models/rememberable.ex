@@ -13,7 +13,7 @@ defmodule Coherence.Rememberable do
     field :series_hash, :string
     field :token_hash, :string
     field :token_created_at, Timex.Ecto.DateTime
-    belongs_to :user, Module.concat(Config.module, Config.user_schema)
+    belongs_to :user, Module.concat(Config.module, Config.user_schema), type: Config.user_id_type
 
     timestamps()
   end

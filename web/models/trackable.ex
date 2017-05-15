@@ -15,7 +15,7 @@ defmodule Coherence.Trackable do
     field :last_sign_in_at, Ecto.DateTime
     field :current_sign_in_ip, :string
     field :last_sign_in_ip, :string
-    belongs_to :user, Config.user_schema
+    belongs_to :user, Config.user_schema, type: Config.user_id_type
 
     timestamps()
   end
