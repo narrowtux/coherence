@@ -329,9 +329,7 @@ defmodule Coherence.SessionControllerBase do
       """
       @spec rememberable_callback(conn, integer, String.t(), String.t(), Keyword.t()) :: conn
       def rememberable_callback(conn, id, series, token, opts) do
-        Coherence.RememberableServer.callback(fn ->
-          do_rememberable_callback(conn, id, series, token, opts)
-        end)
+        do_rememberable_callback(conn, id, series, token, opts)
       end
 
       @doc false
